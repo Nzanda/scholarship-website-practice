@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>scholarship Opportunities</title>
+  <style>
+    body{
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff0f5;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth
+    }
+   .container{
+          max-width: 1000px;
+         margin: auto;
+         background: #ffffff;
+          padding:40px;
+          margin-top: 30px;
+          margin-bottom: 30px;
+          border-radius: 10px;
+          box-shadow: 0 0 20px rgba(176,48,176,0.1);
+         }
+    header {
+     text-align: center;
+     padding-bottom: 30px;
+      }
+    h1{
+      color: #b030b0;
+      font-size: 32px;
+    }
+   
+    nav{margin: 15px 0;}
+    nav a {
+        color: #f06292;
+        text-decoration: none;
+        margin: 0 12px;
+        font-weight: bold;
+    }
+    nav a:hover{
+        text-decoration: underline;
+    }
+    #searchInput {
+       width: 100%;
+      padding: 12px;
+      font-size: 16px;
+       margin-bottom: 15px;
+      border: 1px solid #f8bbd0;
+      border-radius: 6px;
+      background:#fff8fb
+     }
+    .scholarship {
+     border-bottom: 1px solid #fcd6e0;
+     padding: 25px 0;
+     transition: background 0.3s ease;
+     }
+    .scholarship:hover {
+        background-color: #fff3f9;
+    }
+    .scholarship h2 {
+     margin-bottom: 8px;
+     color: #c2185b;
+      }
+    .scholarship p{
+      margin: 5px 0;
+      color: #555;
+     }
+    .tags{
+        margin-top: 8px;
+    }
+    .tag{
+        display: inline-block;
+        padding: 4px 10px;
+        background-color: #ffe3fe;
+        color: #f06292;
+        border-radius: 20px;
+        font-size: 13px;
+        margin-right: 5px;
+
+    }
+    a.button{
+      display: inline-block;
+      margin-top: 10px;
+      padding:10px 18px;
+      background: #f06292;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+      }
+    a.button:hover {
+     background: #ec407a;
+     }
+   footer {
+     text-align: center;
+      padding: 25px 10px;
+      background: #b030b0;
+      color: white;
+      font-size: 15px;
+      }
+   @media (max-width: 600px) {
+     .container{
+      padding: 20px;
+     }
+     }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Scholarship Opportunities</h1> 
+      
+      <img src="planet.jpg" alt="decorative planet image" style="width:100%; max-height:300px; object-fit: cover; border-radius: 10px; margin-top:15px;"/>
+      <nav>
+        <a href="html.html">home</a>
+        <a href="about.html">about</a>
+        <a href="contact.html">contact</a>
+      </nav>
+      <input type="text" id="searchInput" onkeyup="searchScholarships()" placeholder="Search Scholarships by Name...">
+    </header>
+    <div class="scholarship">
+      <h2>DAAD Scholarship (Germany)</h2>
+      <p><strong>Deadline:</strong> October 31, 2025</p>
+      <p><strong>Eligibility:</strong> postgraduate students from developing contries like Camer</p>
+      <div class="tags">
+        <span class="tag">postgraduate</span>
+        <span class="tag">fully funded</span>
+      </div>
+      <a class="button" href="https://www.daad.de/en/" target="_blank">Apply </a>
+    </div>
+    <div class="scholarship">
+      <h2>MasterCard Foundation Scholarship</h2>
+      <p><strong>Deadline:</stong> September 10, 2025</p>
+      <p><strong>Eligibility:</strong> Undergraduate students from sub-saharan Africa</p>
+      <div class="tags">
+        <span class="tag">undergraduate</span>
+        <span class="tag">Africa</span>
+      </div>
+      <a class="button" href="https://mastercardfoundation.org" target="_blank">Apply Now</a>
+    </div>
+    
+    <div class="scholarship">
+       <h2>CommonWealth Shared Scholarship</h2>
+       <p><strong><Deadline:</strong> December 22, 2025</p>
+       <p><strong><Eligibility:</strong> Masters students from Commonwealth countries</p>
+       <div class="tags">
+        <span class="tag">masters</span>
+        <span class="tag">uk</span>
+      </div>
+       <a class="button" href="https://cscuk.fcdo.gov.uk" target="_blank">Apply Now</a>
+    </div>
+ </div>
+  <footer>
+    &copy; find your Opportunities | contact: <a href="mailto:nzandacydocol89@icloud.com" style="color:f5f5f5;">nzandacydocol89@icloud.com</a>
+  </footer>
+ 
+ <script>
+   function searchScholarships(){
+     const input = document.getElementById("searchInput").value.tolowerCase();
+     const scholarships = document.getElementByClassName("Scholarship");
+
+     for (let i = 0; i< scholarships.length; i++) {
+       const title = scholarships[i].getElementsByTagName("h2")[0].textContent.toLowerCase();
+       scholarships[i].style.display = title.includes(input)?"":"none";
+     }
+     }
+</script>
+</body>
+</html>
+   
+ 
