@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>scholarship Opportunities</title>
+  <style>
+    body{
+      font-family: Arial, sans-serif;
+      background: #eef2f7;
+      margin: 0;
+      padding: 0;
+    }
+   .container{
+          max-width: 900px;
+         margin: auto;
+         background: white;
+          padding:30px;
+          border-radius: 8px;
+          box-shadow: 0 0 10px rgba(0,0,0,0.1);
+         }
+    header {
+     text-align: center;
+     padding-bottom: 20px;
+      }
+    h1{
+      color: #2c3e50;
+    }
+    #searchInput {
+       width: 100%;
+      padding: 10px;
+      font-size: 16px;
+       margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+     }
+    .scholarship {
+     border-bottom: 1px solid #ddd;
+     padding: 20px 0;
+     }
+    .scholarship h2 {
+     margin: 0;
+     color: #34495e;
+      }
+    .scholarship p{
+      margin: 5px 0;
+     }
+    a.button{
+      display: inline-block;
+      margin-top: 10px;
+      padding:8px 16px;
+      background: #3498db;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      }
+    a.button:hover {
+     background: #2980b9;
+     }
+   footer {
+     text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      background: #2c3e50;
+      color: white;
+      font-size: 14px;
+      }
+   @media (max-width: 600px) {
+     .container{
+      padding: 15px;
+     }
+     }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Scholarship Opportunities</h1> 
+      <input type="text" id="searchInput" onkeyup="searchScholarships()" placeholder="Search Scholarships by Name...">
+    </header>
+    <div class="scholarship">
+      <h2>DAAD Scholarship (Germany)</h2>
+      <p><strong>Deadline:</strong> October 31, 2025</p>
+      <p><strong>Eligibility:</strong> postgraduate students from developing contries like Camer</p>
+      <a class="button" href="https://www.daad.de/en/" target="_blank">Apply </a>
+    </div>
+    <div class="scholarship">
+      <h2>MasterCard Foundation Scholarship</h2>
+      <p><strong>Deadline:</stong> September 10, 2025</p>
+      <p><strong>Eligibility:</strong> Undergraduate students from sub-saharan Africa</p>
+      <a class="button" href="https://mastercardfoundation.org" target="_blank">Apply Now</a>
+    </div>
+    
+    <div class="scholarship">
+       <h2>CommonWealth Shared Scholarship</h2>
+       <p><strong><Deadline:</strong> December 22, 2025</p>
+       <p><strong><Eligibility:</strong> Masters students from Commonwealth countries</p>
+       <a class="button" href="https://cscuk.fcdo.gov.uk" target="_blank">Apply Now</a>
+    </div>
+
+  <footer>
+    &copy; 2025 Scholarship Finder | contact: nzandacydocol89@icloud.com
+  </footer>
+ </div>
+ <script>
+   function searchScholarships(){
+     const input = document.getElementById("searchInput").value.tolowerCase();
+     const scholarships = document.getElementByClassName("Scholarship");
+
+     for (let i = 0; i< scholarships.length; i++) {
+       const title = scholarships[i].getElementsByTagName("h2")[0].textContent.toLowerCase();
+       scholarships[i].style.display = title.includes(input)?"":"none";
+     }
+     }
+</script>
+</body>
+</html>
+   
+ 
